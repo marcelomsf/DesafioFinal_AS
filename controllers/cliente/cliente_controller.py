@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, jsonify, request
+from flask import Blueprint, jsonify, request
 from models.cliente import Cliente
 from views.cliente_view import clientes_list_to_json, cliente_to_json
 from database import db
