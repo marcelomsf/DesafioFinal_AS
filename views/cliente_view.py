@@ -1,4 +1,4 @@
-def user_to_json(cliente):
+def cliente_to_json(cliente):
     return {
         "id": cliente.id,
         "username": cliente.username,
@@ -8,5 +8,5 @@ def user_to_json(cliente):
         
     }
 
-def users_list_to_json(clientes):
-    return [user_to_json(cliente) for cliente in clientes]
+def clientes_list_to_json(clientes):
+    return [cliente_to_json(cliente) for cliente in clientes]
