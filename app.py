@@ -1,8 +1,6 @@
 from flask import Flask
 from controllers.cliente.cliente_controller import cliente_bp
-from models.cliente import Cliente
-from models.produto import Produto
-from models.pedido import Pedido
+
 from database import db
 
 app = Flask(__name__)
