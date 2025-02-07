@@ -9,5 +9,5 @@ class Pedido(db.Model):
     id_pedido = db.Column(db.Integer)
     id_produto = db.Column(db.Integer, db.ForeignKey(Produto.id), nullable=False)
     id_cliente = db.Column(db.Integer, db.ForeignKey(Cliente.id), nullable=False )
-    qtd = db.Column(db.String(200),  nullable=False)
+    qtd = db.Column(db.Integer,  nullable=False)
 
