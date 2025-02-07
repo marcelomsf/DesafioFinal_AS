@@ -65,6 +65,12 @@ def count_clientes():
 
 @cliente_bp.route("/cliente/username/<string:username>", methods=["GET"])
 def get_cliente_by_username(username):
+    cliente = None
     cliente = Cliente.query.filter_by(username=username).first()
+    
+    if cliente is None:
+        return jsonify({"message": "Cliente não encontrado!"}), 404
+
+    
     return jsonify(cliente_to_json(cliente))
 
