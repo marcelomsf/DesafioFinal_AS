@@ -70,7 +70,6 @@ def get_cliente_by_username(username):
     
     if cliente is None:
         return jsonify({"message": "Cliente não encontrado!"}), 404
-
     
     return jsonify(cliente_to_json(cliente))
 
